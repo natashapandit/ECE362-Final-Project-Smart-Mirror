@@ -3,8 +3,9 @@
 
 #include <stdbool.h>
 
-extern volatile bool alarm_active;\
+extern volatile bool alarm_active;
+extern volatile bool alarm_flash_state;
 
-// high when alarm is active, resets in 10s or on alarm_clear()
-
+// alarm_active high when alarm is active, resets in 10s or on alarm_clear()
+//alarm_flash_state 
 #endif
