@@ -41,10 +41,10 @@
 #define HSTX_CMD_TMDS_REPEAT (0x3u << 12)
 #define HSTX_CMD_NOP         (0xfu << 12)
 
-
-// DMA Logic
 #define DMACH_PING 0
 #define DMACH_PONG 1
 
+// Display
+void display_init(void);
 
 #endif

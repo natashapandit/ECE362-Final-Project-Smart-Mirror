@@ -17,7 +17,7 @@ void volume_init(void) {
 void volume_update(void) {
     adc_select_input(VOLUME_ADC_CH);
     current_volume = adc_read();
-    printf("VOLUME: %d\n", current_volume);
+    //printf("VOLUME: %d\n", current_volume);
 }
 
 uint16_t volume_get(void) {

@@ -4,6 +4,7 @@
 #include "alarm/alarm.h"
 #include "sound/sound.h"
 #include "sound/volume.h"
+#include "hstx/hstx.h"
 
 // definition lives here — everyone else just extern's it via alarm_state.h
 volatile bool alarm_active = false;
@@ -11,11 +12,13 @@ volatile bool alarm_active = false;
 int main() {
     stdio_init_all();
 
+    display_init();
     led_init();
-    clock_init(10, 0, 0); // set current time
-    alarm_set(10, 0, 10); //alarm time
     sound_init();
     volume_init();
+    clock_init(10, 0, 0); // set current time
+    alarm_set(10, 0, 10); //alarm time
+
 
     while (1) {
         clock_update();
