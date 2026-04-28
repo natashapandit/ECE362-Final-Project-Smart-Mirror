@@ -44,7 +44,15 @@
 #define DMACH_PING 0
 #define DMACH_PONG 1
 
-// Display
+// Logical resolution (physical is 2x in both dimensions)
+#define FB_WIDTH  320
+#define FB_HEIGHT 240
+
+// Colors (RGB332)
+#define COLOR_BLACK 0x00
+#define COLOR_WHITE 0xFF
+
 void display_init(void);
+void display_update(void);
 
 #endif
